@@ -1,0 +1,78 @@
+{
+  "message" : "Editor's picks",
+  "playlists" : {
+    "href" : "https://api.spotify.com/v1/browse/featured-playlists?timestamp=2021-02-12T16%3A33%3A20&offset=0&limit=20",
+    "items" : [ {
+      "collaborative" : false,
+      "description" : "The very best in new music from around the world. Cover: Dua Lipa",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/playlist/37i9dQZF1DWXJfnUiYjUKT"
+      },
+      "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1DWXJfnUiYjUKT",
+      "id" : "37i9dQZF1DWXJfnUiYjUKT",
+      "images" : [ {
+        "height" : null,
+        "url" : "https://i.scdn.co/image/ab67706f00000003982963e5b335206c2f6cf347",
+        "width" : null
+      } ],
+      "name" : "New Music Friday",
+      "owner" : {
+        "display_name" : "Spotify",
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/user/spotify"
+        },
+        "href" : "https://api.spotify.com/v1/users/spotify",
+        "id" : "spotify",
+        "type" : "user",
+        "uri" : "spotify:user:spotify"
+      },
+      "primary_color" : null,
+      "public" : null,
+      "snapshot_id" : "MTYxMzA4NDU3NCwwMDAwMDMwNDAwMDAwMTc3OTM1NTQyMDcwMDAwMDE3NzkzMWFkYTMz",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1DWXJfnUiYjUKT/tracks",
+        "total" : 100
+      },
+      "type" : "playlist",
+      "uri" : "spotify:playlist:37i9dQZF1DWXJfnUiYjUKT"
+    }, {
+      "collaborative" : false,
+      "description" : "Uplifting anthems to power you through 'til the weekend.",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/playlist/37i9dQZF1DX1g0iEXLFycr"
+      },
+      "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1DX1g0iEXLFycr",
+      "id" : "37i9dQZF1DX1g0iEXLFycr",
+      "images" : [ {
+        "height" : null,
+        "url" : "https://i.scdn.co/image/ab67706f00000003104f039c1cc982d3617f4e4b",
+        "width" : null
+      } ],
+      "name" : "Feel Good Friday",
+      "owner" : {
+        "display_name" : "Spotify",
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/user/spotify"
+        },
+        "href" : "https://api.spotify.com/v1/users/spotify",
+        "id" : "spotify",
+        "type" : "user",
+        "uri" : "spotify:user:spotify"
+      },
+      "primary_color" : null,
+      "public" : null,
+      "snapshot_id" : "MTYxMzE0NzU3OSwwMDAwMDAwMGQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0Mjdl",
+      "tracks" : {
+        "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1DX1g0iEXLFycr/tracks",
+        "total" : 100
+      },
+      "type" : "playlist",
+      "uri" : "spotify:playlist:37i9dQZF1DX1g0iEXLFycr"
+    }],
+    "limit" : 20,
+    "next" : null,
+    "offset" : 0,
+    "previous" : null,
+    "total" : 2
+  }
+}

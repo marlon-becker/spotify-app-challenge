@@ -1,0 +1,103 @@
+{
+  "albums" : {
+    "href" : "https://api.spotify.com/v1/browse/new-releases?offset=0&limit=20",
+    "items" : [ {
+      "album_type" : "album",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/33eHnoVi12zOWe8MdqRYsR"
+        },
+        "href" : "https://api.spotify.com/v1/artists/33eHnoVi12zOWe8MdqRYsR",
+        "id" : "33eHnoVi12zOWe8MdqRYsR",
+        "name" : "Judas and the Black Messiah",
+        "type" : "artist",
+        "uri" : "spotify:artist:33eHnoVi12zOWe8MdqRYsR"
+      } ],
+      "available_markets" : [ "AE", "AU", "BG", "BH", "BY", "CY", "EE", "EG", "FI", "GR", "HK", "ID", "IL", "IN", "JO", "JP", "KR", "KW", "KZ", "LB", "LT", "LV", "MD", "MY", "NZ", "OM", "PH", "PS", "QA", "RO", "RU", "SA", "SG", "TH", "TR", "TW", "UA", "VN", "ZA", "AD", "AL", "AT", "BA", "BE", "CH", "CZ", "DE", "DK", "DZ", "ES", "FR", "HR", "HU", "IT", "LI", "LU", "MA", "MC", "ME", "MK", "MT", "NL", "NO", "PL", "RS", "SE", "SI", "SK", "TN", "XK", "GB", "IE", "IS", "PT", "AR", "BR", "CL", "PY", "UY", "BO", "DO", "CA", "CO", "EC", "PA", "PE", "US", "CR", "GT", "HN", "MX", "NI", "SV" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/0f0XZWfp7I1awuU40IPGGz"
+      },
+      "href" : "https://api.spotify.com/v1/albums/0f0XZWfp7I1awuU40IPGGz",
+      "id" : "0f0XZWfp7I1awuU40IPGGz",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/ab67616d0000b273b02a3380a69bd2418a1f68f1",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/ab67616d00001e02b02a3380a69bd2418a1f68f1",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/ab67616d00004851b02a3380a69bd2418a1f68f1",
+        "width" : 64
+      } ],
+      "name" : "Judas and the Black Messiah: The Inspired Album",
+      "release_date" : "2021-02-12",
+      "release_date_precision" : "day",
+      "total_tracks" : 22,
+      "type" : "album",
+      "uri" : "spotify:album:0f0XZWfp7I1awuU40IPGGz"
+    }, {
+      "album_type" : "single",
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/790FomKkXshlbRYZFtlgla"
+        },
+        "href" : "https://api.spotify.com/v1/artists/790FomKkXshlbRYZFtlgla",
+        "id" : "790FomKkXshlbRYZFtlgla",
+        "name" : "KAROL G",
+        "type" : "artist",
+        "uri" : "spotify:artist:790FomKkXshlbRYZFtlgla"
+      }, {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/2R21vXR83lH98kGeO99Y66"
+        },
+        "href" : "https://api.spotify.com/v1/artists/2R21vXR83lH98kGeO99Y66",
+        "id" : "2R21vXR83lH98kGeO99Y66",
+        "name" : "Anuel AA",
+        "type" : "artist",
+        "uri" : "spotify:artist:2R21vXR83lH98kGeO99Y66"
+      }, {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/1vyhD5VmyZ7KMfW5gqLgo5"
+        },
+        "href" : "https://api.spotify.com/v1/artists/1vyhD5VmyZ7KMfW5gqLgo5",
+        "id" : "1vyhD5VmyZ7KMfW5gqLgo5",
+        "name" : "J Balvin",
+        "type" : "artist",
+        "uri" : "spotify:artist:1vyhD5VmyZ7KMfW5gqLgo5"
+      } ],
+      "available_markets" : [ "AD", "AE", "AL", "AR", "AT", "AU", "BA", "BE", "BG", "BH", "BO", "BR", "BY", "CA", "CH", "CL", "CO", "CR", "CY", "CZ", "DE", "DK", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FR", "GB", "GR", "GT", "HK", "HN", "HR", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JO", "JP", "KR", "KW", "KZ", "LB", "LI", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MK", "MT", "MX", "MY", "NI", "NL", "NO", "NZ", "OM", "PA", "PE", "PH", "PL", "PS", "PT", "PY", "QA", "RO", "RS", "RU", "SA", "SE", "SG", "SI", "SK", "SV", "TH", "TN", "TR", "TW", "UA", "US", "UY", "VN", "XK", "ZA" ],
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/album/4ipeZHF3UKl2AKFqDhBCXR"
+      },
+      "href" : "https://api.spotify.com/v1/albums/4ipeZHF3UKl2AKFqDhBCXR",
+      "id" : "4ipeZHF3UKl2AKFqDhBCXR",
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/ab67616d0000b2735a781df1741539e2817ad357",
+        "width" : 640
+      }, {
+        "height" : 300,
+        "url" : "https://i.scdn.co/image/ab67616d00001e025a781df1741539e2817ad357",
+        "width" : 300
+      }, {
+        "height" : 64,
+        "url" : "https://i.scdn.co/image/ab67616d000048515a781df1741539e2817ad357",
+        "width" : 64
+      } ],
+      "name" : "LOCATION",
+      "release_date" : "2021-02-12",
+      "release_date_precision" : "day",
+      "total_tracks" : 1,
+      "type" : "album",
+      "uri" : "spotify:album:4ipeZHF3UKl2AKFqDhBCXR"
+    } ],
+    "limit" : 20,
+    "next" : "https://api.spotify.com/v1/browse/new-releases?offset=20&limit=20",
+    "offset" : 0,
+    "previous" : null,
+    "total" : 2
+  }
+}

@@ -16,8 +16,8 @@ const Test = () => {
   useEffect(() => {
     const authorize = async () => {
       try {
-      const token = await auth()
-      dispatch(authorized(token))
+      const authResponse = await auth()
+      dispatch(authorized(authResponse.access_token))
       } catch (error) {
         dispatch(unauthorized())
       }

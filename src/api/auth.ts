@@ -10,10 +10,6 @@ interface SpotifyAuthResponse {
   scope: string
 }
 
-interface ServerResponse {
-  data: SpotifyAuthResponse
-}
-
 export const auth = async (): Promise<SpotifyAuthResponse> => {
   const { REACT_APP_SPOTIFY_CLIENT_SECRET, REACT_APP_SPOTIFY_CLIENT_ID } = process.env
   const credentials = encode(
@@ -29,8 +25,7 @@ export const auth = async (): Promise<SpotifyAuthResponse> => {
     {
       headers: {
         Authorization: `Basic ${credentials}`
-      },
-      transformResponse: (response: ServerResponse) => response.data
+      }
     }
   ).catch((error) => {
     throw Error(`Authorization failed: ${error}`)
