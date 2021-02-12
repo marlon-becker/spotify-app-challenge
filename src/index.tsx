@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import './styles/_main.less'
-import { auth } from './api/auth'
+import { spotifyAuth } from './api/spotifyAuth'
 import {
   AuthContext,
   authorized,
@@ -16,7 +16,7 @@ const Test = () => {
   useEffect(() => {
     const authorize = async () => {
       try {
-      const authResponse = await auth()
+      const authResponse = await spotifyAuth()
       dispatch(authorized(authResponse.access_token))
       } catch (error) {
         dispatch(unauthorized())

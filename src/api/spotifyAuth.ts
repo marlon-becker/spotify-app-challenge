@@ -10,7 +10,7 @@ interface SpotifyAuthResponse {
   scope: string
 }
 
-export const auth = async (): Promise<SpotifyAuthResponse> => {
+export const spotifyAuth = async (): Promise<SpotifyAuthResponse> => {
   const { REACT_APP_SPOTIFY_CLIENT_SECRET, REACT_APP_SPOTIFY_CLIENT_ID } = process.env
   const credentials = encode(
     `${REACT_APP_SPOTIFY_CLIENT_ID}:${REACT_APP_SPOTIFY_CLIENT_SECRET}`
