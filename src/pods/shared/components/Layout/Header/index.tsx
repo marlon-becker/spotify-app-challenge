@@ -9,7 +9,7 @@ const Header: FC = () => {
     <header className={styles.header}>
       <h1>Your favourite tunes</h1>
       <h2>
-        All <FontAwesomeIcon className={styles.sun} icon={faSun} />️ and all
+        All <FontAwesomeIcon className={styles.sun} icon={faSun} />️ and all{' '}
         <FontAwesomeIcon className={styles.moon} icon={faMoon} />️
       </h2>
     </header>

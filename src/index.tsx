@@ -12,6 +12,7 @@ import {
 } from './pods/auth'
 import Layout from './pods/shared/components/Layout'
 import HomeContainer from './pods/Home/components/HomeContainer'
+import Message from './pods/shared/components/Message'
 
 const App = () => {
   const [state, dispatch] = React.useReducer(reducer, initialState)
@@ -33,9 +34,9 @@ const App = () => {
     <AuthContext.Provider value={state}>
       <Layout>
         {!state.isAuthorizing && state.isAuthorized && <HomeContainer />}
-        {state.isAuthorizing && <div>Authorizing</div>}
+        {state.isAuthorizing && <Message>Loading</Message>}
         {!state.isAuthorizing && !state.isAuthorized && (
-          <div>Not authorized</div>
+          <Message>Error with Spotify authorization</Message>
         )}
       </Layout>
     </AuthContext.Provider>

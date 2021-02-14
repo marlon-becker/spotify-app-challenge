@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import Section from './Section'
 import useMultipleRequest from '../../shared/hooks/useMultipleRequests'
+import Message from '../../shared/components/Message'
 
 const Content: FC = () => {
   const {
@@ -11,8 +12,8 @@ const Content: FC = () => {
     isError,
   } = useMultipleRequest()
 
-  if (isLoading) return <div>Loading</div>
-  if (isError) return <div>Error loading</div>
+  if (isLoading) return <Message>Loading</Message>
+  if (isError) return <Message>Error loading</Message>
 
   return (
     <>
