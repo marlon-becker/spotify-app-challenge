@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import Section from './Section'
-import useMultipleRequest from '../../shared/hooks/useMultipleRequests'
+import useHomeContent from '../hooks/useHomeContent'
 import Message from '../../shared/components/Message'
 
 const Content: FC = () => {
@@ -10,7 +10,7 @@ const Content: FC = () => {
     featuredPlaylists,
     isLoading,
     isError,
-  } = useMultipleRequest()
+  } = useHomeContent()
 
   if (isLoading) return <Message>Loading</Message>
   if (isError) return <Message>Error loading</Message>

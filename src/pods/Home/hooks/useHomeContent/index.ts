@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from 'react'
 import spotifyWebApi from '../../../api/spotifyWebApi'
 import { AuthContext } from '../../../auth'
 
-const useMultipleRequest = () => {
+const useHomeContent = () => {
   const context = useContext(AuthContext)
   const api = spotifyWebApi(context.token)
 
@@ -43,4 +43,4 @@ const useMultipleRequest = () => {
   }
 }
 
-export default useMultipleRequest
+export default useHomeContent
