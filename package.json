@@ -16,7 +16,7 @@
     "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "js-base64": "^3.6.0",
-    "node-less-chokidar": "^0.4.1",
+    "node-sass": "^5.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "4.0.2",
@@ -26,7 +26,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build-css": "node-less-chokidar src/ -o src/",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "test:lint": "eslint . --ext .tsx,.ts"
