@@ -1,4 +1,4 @@
-interface Image {
+export interface Image {
   height?: number
   url: string
   width?: number
@@ -26,7 +26,7 @@ export interface Category {
 }
 
 export interface SpotifyApi {
-  getCategories: () => Promise<Category[]> | void
-  getFeaturedPlaylists: () => Promise<PlayList[]> | void
-  getNewReleases: () => Promise<Album[]> | void
+  getCategories: () => Promise<Category[]>
+  getFeaturedPlaylists: () => Promise<PlayList[]>
+  getNewReleases: () => Promise<Album[]>
 }

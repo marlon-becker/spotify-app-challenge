@@ -1,6 +1,6 @@
 import SpotifyWebApi from 'spotify-web-api-js'
 
-import { SpotifyApi } from './types'
+import { Album, Category, PlayList, SpotifyApi } from './types'
 
 export const transformNewReleases = (releases: SpotifyApi.ListOfNewReleasesResponse) => {
   return releases.albums.items.map((album => ({
@@ -25,6 +25,8 @@ export const transformCategories = (categories: SpotifyApi.MultipleCategoriesRes
     name: category.name
   }))
 }
+
+export type spotifyApiResponse = Promise<Category[]> | Promise<PlayList[]> | Promise<Album[]>
 
 const spotifyWebApi = (token): SpotifyApi  => {
   const spotifyApi = new SpotifyWebApi();
