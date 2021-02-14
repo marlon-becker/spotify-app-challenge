@@ -1,8 +1,5 @@
-$header-color: #cecedd;
-$border-color: #eeeeee;
-
 .header {
-  color: $header-color;
+  color: var(--grey-color);
   font-weight: var(--bold);
   text-transform: uppercase;
   position: relative;
@@ -12,7 +9,7 @@ $border-color: #eeeeee;
     top: calc(50% - 1px);
     width: 100%;
     height: 2px;
-    background: $border-color;
+    background: var(--grey-color-light);
   }
   span {
     background: var(--bg-color);

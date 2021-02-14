@@ -10,10 +10,13 @@
 body {
   --primary-color: #{$DarkPlum};
   --secondary-color: #{$Melon};
+  --grey-color: #{#cecedd};
+  --grey-color-light: #{#eeeeee};
   --bold: 600;
   --transition-duration: 0.2s;
   --transition-easing: ease-in-out;
   --border-radius: 1rem;
+  --border-radius-s: 0.5rem;
   --bg-color: #F9F8FF
 }
 

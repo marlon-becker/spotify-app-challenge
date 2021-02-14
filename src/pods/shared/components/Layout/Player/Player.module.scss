@@ -1,0 +1,74 @@
+@import 'styles/_mixins';
+
+.player {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem 0 0;
+}
+
+.playIcon {
+  color: var(--primary-color);
+  font-size: 3rem;
+  margin: 0 0.5rem;
+}
+
+.controlIcon {
+  font-size: 2rem;
+  color: var(--grey-color)
+}
+
+.time {
+  flex: 1;
+  margin: 0 1rem;
+  background: var(--grey-color);
+  border-radius: var(--border-radius);
+  height: 0.25rem;
+}
+
+.controls {
+  display: flex;
+  margin: 0 1rem;
+  align-items: center;
+}
+
+.actions {
+  color: var(--grey-color);
+  display: flex;
+  align-items: center;
+}
+
+.ellipsis {
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  display: none;
+  @include md {
+    display: block;
+  }
+}
+
+.action {
+  font-size: 1.5rem;
+  margin: 0 1rem;
+
+  @include md {
+    display: none;
+  }
+}
+
+.playing {
+  display: flex;
+  margin: 0 1rem;
+  align-items: center;
+  font-weight: bold;
+  .song {
+    height: 3rem;
+    width: 3rem;
+    background: var(--grey-color-light);
+    border-radius: var(--border-radius-s);
+    margin-right: 1rem;
+  }
+  @include md {
+    display: none;
+  }
+}
