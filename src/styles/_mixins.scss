@@ -1,0 +1,14 @@
+$breakpoint-md: 48rem;
+$breakpoint-lg: 64rem;
+
+@mixin md {
+  @media (max-width: #{$breakpoint-md}) {
+    @content
+  }
+}
+
+@mixin lg {
+  @media (max-width: #{$breakpoint-lg}) {
+    @content
+  }
+}

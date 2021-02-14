@@ -1,0 +1,64 @@
+@import '~animate.css/animate.min.css';
+@import './_vars';
+@import './_fonts';
+@import './_mixins';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  --primary-color: #{$DarkPlum};
+  --secondary-color: #{$Melon};
+  --bold: 600;
+  --transition-duration: 0.2s;
+  --transition-easing: ease-in-out;
+  --border-radius: 1rem;
+  --bg-color: #F9F8FF
+}
+
+body {
+  margin: 0;
+  background: var(--bg-color);
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+h1,
+h2 {
+  margin: 0.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: var(--bold);
+  @include lg {
+    font-size: 2.25rem;
+  }
+  @include md {
+    font-size: 1.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: var(--bold);
+  @include lg {
+    font-size: 1.5rem;
+  }
+  @include md {
+    font-size: 1.25rem;
+  }
+}
+
+h3 {
+  @include md {
+    font-size: 1rem;
+  }
+}
