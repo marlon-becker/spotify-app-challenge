@@ -1,0 +1,22 @@
+@import 'styles/_mixins.scss';
+
+.menu {
+  margin: 1rem 0;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.icon {
+  padding-right: 1.5rem;
+  transition: var(--transition-duration) var(--transition-easing);
+  @include md {
+    font-size: 1.75rem;
+  }
+}
+
+.label {
+  @include md {
+    display: none;
+  }
+}

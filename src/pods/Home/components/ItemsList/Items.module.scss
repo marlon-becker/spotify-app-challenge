@@ -1,0 +1,10 @@
+.itemsList {
+  padding: 1rem 0;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 2rem;
+}

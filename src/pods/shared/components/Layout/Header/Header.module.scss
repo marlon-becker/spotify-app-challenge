@@ -1,0 +1,49 @@
+@import 'styles/_mixins';
+
+.header {
+  align-items: flex-end;
+  background: var(--secondary-color);
+  color: white;
+  height: 14rem;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 4rem 0 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  &:after {
+    content: '';
+    height: 20rem;
+    width: 100%;
+    position: absolute;
+    top: -3rem;
+    left: -4rem;
+    background: url('assets/hero.svg') no-repeat;
+    transform: scaleX(-1);
+    background-size: auto 19rem;
+    background-position-x: 100%;
+  }
+  @include lg {
+    padding: 0 3rem 0 0;
+    &:after {
+      top: -1rem;
+      background-size: auto 16rem;
+    }
+  }
+  @include md {
+    height: 10rem;
+    padding: 0 0 0 1rem;
+    align-items: flex-start;
+    &:after {
+      content: none;
+    }
+  }
+}
+
+.sun {
+  color: #ffd900
+}
+
+.moon {
+  color: black
+}

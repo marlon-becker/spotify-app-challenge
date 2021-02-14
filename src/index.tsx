@@ -1,16 +1,19 @@
 import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom'
-import './styles/_main.less'
-import { spotifyAuth } from './api/spotifyAuth'
+
+import './styles/_main.scss'
+import { spotifyAuth } from './pods/api/spotifyAuth'
 import {
   AuthContext,
   authorized,
   initialState,
   reducer,
   unauthorized
-} from './auth'
+} from './pods/auth'
+import Layout from './pods/shared/components/Layout'
+import HomeContainer from './pods/Home/components/HomeContainer'
 
-const Test = () => {
+const App = () => {
   const [state, dispatch] = React.useReducer(reducer, initialState);
 
   useEffect(() => {
@@ -28,17 +31,18 @@ const Test = () => {
 
   return (
     <AuthContext.Provider value={state}>
-      {!state.isAuthorizing && state.isAuthorized && <div>Authorized</div>}
-      {state.isAuthorizing && <div>Authorizing</div>}
-      {!state.isAuthorizing && !state.isAuthorized && <div>Not authorized</div>}
+      <Layout>
+        {!state.isAuthorizing && state.isAuthorized && <HomeContainer />}
+        {state.isAuthorizing && <div>Authorizing</div>}
+        {!state.isAuthorizing && !state.isAuthorized && <div>Not authorized</div>}
+      </Layout>
     </AuthContext.Provider>
   )
 }
 
 ReactDOM.render(
   <React.StrictMode>
-    <Test />
-    <div>Test</div>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 )

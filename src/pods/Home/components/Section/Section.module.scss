@@ -1,0 +1,21 @@
+$header-color: #cecedd;
+$border-color: #eeeeee;
+
+.header {
+  color: $header-color;
+  font-weight: var(--bold);
+  text-transform: uppercase;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    width: 100%;
+    height: 2px;
+    background: $border-color;
+  }
+  span {
+    background: var(--bg-color);
+    padding-right: 1rem;
+  }
+}
