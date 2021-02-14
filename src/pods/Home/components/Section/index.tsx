@@ -2,6 +2,8 @@ import React, { FC } from 'react'
 
 import styles from './Section.module.scss'
 import ItemsList from './ItemsList'
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 interface Props {
   items: any[]
@@ -11,10 +13,13 @@ interface Props {
 const Section: FC<Props> = (props) => {
   return (
     <section>
-      <header>
-        <h3 className={styles.header}>
-          <span>{props.title}</span>
-        </h3>
+      <header className={styles.header}>
+        <h3>{props.title}</h3>
+        <div className={styles.separator} />
+        <div className={styles.actions}>
+          <FontAwesomeIcon icon={faAngleLeft} />
+          <FontAwesomeIcon icon={faAngleRight} />
+        </div>
       </header>
       <main>
         <ItemsList items={props.items} />

@@ -1,18 +1,28 @@
 .header {
-  color: var(--grey-color);
-  font-weight: var(--bold);
-  text-transform: uppercase;
-  position: relative;
-  &:after {
-    content: '';
-    position: absolute;
-    top: calc(50% - 1px);
-    width: 100%;
-    height: 2px;
-    background: var(--grey-color-light);
-  }
-  span {
-    background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  h3 {
     padding-right: 1rem;
+    color: var(--grey-color);
+    font-weight: var(--bold);
+    text-transform: uppercase;
+    position: relative;
   }
+}
+
+.actions {
+  background: var(--bg-color);
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  z-index: 1;
+  margin-left: 0.5rem;
+  svg {
+    margin: 0 0.25rem;
+  }
+}
+
+.separator {
+  height: 2px;
+  background: var(--grey-color-light);
+  flex: 1;
 }

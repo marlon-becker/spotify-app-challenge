@@ -35,4 +35,7 @@ $sidebar-width-mobile: 6rem;
   padding: 2rem;
   overflow-y: scroll;
   overflow-x: hidden;
+  @include md {
+    padding: 1rem;
+  }
 }

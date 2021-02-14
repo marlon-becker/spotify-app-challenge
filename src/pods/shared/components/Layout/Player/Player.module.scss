@@ -14,7 +14,7 @@
 }
 
 .controlIcon {
-  font-size: 2rem;
+  font-size: 1.25rem;
   color: var(--grey-color)
 }
 
@@ -40,7 +40,7 @@
 
 .ellipsis {
   font-size: 1.5rem;
-  margin: 0 1rem;
+  margin: 0 0 0 1rem;
   display: none;
   @include md {
     display: block;
