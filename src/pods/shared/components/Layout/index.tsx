@@ -13,9 +13,7 @@ const Index: FC = ({ children }) => {
       </aside>
       <main className={styles.main}>
         <Header />
-        <main className={styles.container}>
-          {children}
-        </main>
+        <main className={styles.container}>{children}</main>
         <footer>
           <Player />
         </footer>

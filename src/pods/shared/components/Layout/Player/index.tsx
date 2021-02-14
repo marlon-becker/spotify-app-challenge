@@ -7,7 +7,7 @@ import {
   faEllipsisH,
   faHeart,
   faRandom,
-  faVolumeDown
+  faVolumeDown,
 } from '@fortawesome/free-solid-svg-icons'
 
 import styles from './Player.module.scss'
@@ -16,7 +16,7 @@ const Player: FC = () => {
   return (
     <div className={styles.player}>
       <div className={styles.playing}>
-        <div className={styles.song} /> Nothing's playing
+        <div className={styles.song} /> Nothing&apos;s playing
       </div>
       <div className={styles.controls}>
         <FontAwesomeIcon className={styles.controlIcon} icon={faStepBackward} />
@@ -29,7 +29,6 @@ const Player: FC = () => {
         <FontAwesomeIcon className={styles.action} icon={faHeart} />
         <FontAwesomeIcon className={styles.action} icon={faRandom} />
         <FontAwesomeIcon className={styles.action} icon={faVolumeDown} />
-
       </div>
     </div>
   )

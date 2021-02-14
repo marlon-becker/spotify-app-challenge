@@ -10,7 +10,9 @@ interface Props {
 const ItemsList: FC<Props> = ({ items }) => {
   return (
     <ul className={styles.itemsList}>
-      {items.map((item) => <Item item={item} />)}
+      {items.map((item) => (
+        <Item key={item.name} item={item} />
+      ))}
     </ul>
   )
 }

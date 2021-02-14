@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
 import Section from './Section'
 import useMultipleRequest from '../../shared/hooks/useMultipleRequests'
-import ItemsList from './ItemsList'
 
 const Content: FC = () => {
   const {
@@ -9,7 +8,7 @@ const Content: FC = () => {
     newReleases,
     featuredPlaylists,
     isLoading,
-    isError
+    isError,
   } = useMultipleRequest()
 
   if (isLoading) return <div>Loading</div>
@@ -17,15 +16,9 @@ const Content: FC = () => {
 
   return (
     <>
-      <Section title={'Release this week'}>
-        <ItemsList items={categories} />
-      </Section>
-      <Section title={'Featured playlists'}>
-        <ItemsList items={newReleases} />
-      </Section>
-      <Section title={'Browse'}>
-        <ItemsList items={featuredPlaylists} />
-      </Section>
+      <Section title={'Release this week'} items={categories} />
+      <Section title={'Featured playlists'} items={newReleases} />
+      <Section title={'Browse'} items={featuredPlaylists} />
     </>
   )
 }

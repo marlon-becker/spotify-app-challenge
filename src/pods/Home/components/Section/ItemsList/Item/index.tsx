@@ -5,15 +5,14 @@ import styles from './Item.module.scss'
 
 interface Props {
   item: {
-    name: string,
+    name: string
     images: Image[]
-
   }
 }
 
 const Item: FC<Props> = ({ item }) => {
   return (
-    <li className={[styles.item, "animate__animated animate__fadeIn"].join(' ')}>
+    <li className={`${styles.item} animate__animated animate__fadeIn`}>
       <img alt={item.name} src={item.images[0].url} />
       <p>{item.name}</p>
     </li>

@@ -3,10 +3,10 @@ import spotifyWebApi from '../../../api/spotifyWebApi'
 import { AuthContext } from '../../../auth'
 
 const useMultipleRequest = () => {
-  const context = useContext(AuthContext);
+  const context = useContext(AuthContext)
   const api = spotifyWebApi(context.token)
 
-  const [response, setResponse] = useState<any>([[],[],[]])
+  const [response, setResponse] = useState<any>([[], [], []])
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [isError, setIsError] = useState<boolean>(false)
 
@@ -17,14 +17,16 @@ const useMultipleRequest = () => {
       Promise.all([
         api.getCategories(),
         api.getNewReleases(),
-        api.getFeaturedPlaylists()
-      ]).then((responses) => {
-        setResponse(responses)
-        setIsLoading(false)
-      }).catch(() => {
-        setIsLoading(false)
-        setIsError(false)
-      })
+        api.getFeaturedPlaylists(),
+      ])
+        .then((responses) => {
+          setResponse(responses)
+          setIsLoading(false)
+        })
+        .catch(() => {
+          setIsLoading(false)
+          setIsError(false)
+        })
     }
 
     if (context.token) {
@@ -33,11 +35,11 @@ const useMultipleRequest = () => {
   }, [context.token])
 
   return {
-    categories: response[0] ,
+    categories: response[0],
     newReleases: response[1],
     featuredPlaylists: response[2],
     isLoading,
-    isError
+    isError,
   }
 }
 

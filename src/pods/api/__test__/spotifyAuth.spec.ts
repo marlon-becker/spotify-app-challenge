@@ -1,4 +1,5 @@
 import axios from 'axios'
+
 import { spotifyAuth } from '../spotifyAuth'
 import * as stubs from './stubs'
 
@@ -14,7 +15,9 @@ describe('Given spotify spotifyAuth', () => {
   describe('When request is made to spotify spotifyAuth endpoint', () => {
     describe('And has a valid response', () => {
       beforeEach(() => {
-        mockedAxios.post.mockImplementationOnce(() => Promise.resolve(stubs.axiosResponse))
+        mockedAxios.post.mockImplementationOnce(() =>
+          Promise.resolve(stubs.axiosResponse)
+        )
       })
       it('Then it should make post call', async () => {
         await spotifyAuth()
@@ -26,11 +29,13 @@ describe('Given spotify spotifyAuth', () => {
     describe('And has an error response', () => {
       beforeEach(() => {
         mockedAxios.post.mockImplementationOnce(() =>
-          Promise.reject(stubs.errorMessage),
-        );
+          Promise.reject(stubs.errorMessage)
+        )
       })
       it('Then should return error message', async () => {
-        await expect(spotifyAuth()).rejects.toThrow(`Authorization failed: ${stubs.errorMessage}`);
+        await expect(spotifyAuth()).rejects.toThrow(
+          `Authorization failed: ${stubs.errorMessage}`
+        )
       })
     })
   })

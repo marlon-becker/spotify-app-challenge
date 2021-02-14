@@ -11,7 +11,10 @@ interface SpotifyAuthResponse {
 }
 
 export const spotifyAuth = async (): Promise<SpotifyAuthResponse> => {
-  const { REACT_APP_SPOTIFY_CLIENT_SECRET, REACT_APP_SPOTIFY_CLIENT_ID } = process.env
+  const {
+    REACT_APP_SPOTIFY_CLIENT_SECRET,
+    REACT_APP_SPOTIFY_CLIENT_ID,
+  } = process.env
   const credentials = encode(
     `${REACT_APP_SPOTIFY_CLIENT_ID}:${REACT_APP_SPOTIFY_CLIENT_SECRET}`
   )
@@ -19,17 +22,15 @@ export const spotifyAuth = async (): Promise<SpotifyAuthResponse> => {
   const body = new URLSearchParams()
   body.set('grant_type', 'client_credentials')
 
-  const response = await axios.post<SpotifyAuthResponse>(
-    config.api.authUrl,
-    body,
-    {
+  const response = await axios
+    .post<SpotifyAuthResponse>(config.api.authUrl, body, {
       headers: {
-        Authorization: `Basic ${credentials}`
-      }
-    }
-  ).catch((error) => {
-    throw Error(`Authorization failed: ${error}`)
-  })
+        Authorization: `Basic ${credentials}`,
+      },
+    })
+    .catch((error) => {
+      throw Error(`Authorization failed: ${error}`)
+    })
 
   return response.data
 }

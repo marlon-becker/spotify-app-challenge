@@ -2,12 +2,14 @@ import SpotifyWebApi from 'spotify-web-api-js'
 
 import { Album, Category, PlayList, SpotifyApi } from './types'
 
-export const transformNewReleases = (releases: SpotifyApi.ListOfNewReleasesResponse) => {
-  return releases.albums.items.map((album => ({
+export const transformNewReleases = (
+  releases: SpotifyApi.ListOfNewReleasesResponse
+) => {
+  return releases.albums.items.map((album) => ({
     albumType: album.album_type,
     images: album.images,
-    name: album.name
-  })))
+    name: album.name,
+  }))
 }
 
 export const transformFeaturedPlaylists = (
@@ -15,21 +17,26 @@ export const transformFeaturedPlaylists = (
 ) => {
   return featuredPlaylists.playlists.items.map((playlist) => ({
     images: playlist.images,
-    name: playlist.name
+    name: playlist.name,
   }))
 }
 
-export const transformCategories = (categories: SpotifyApi.MultipleCategoriesResponse) => {
+export const transformCategories = (
+  categories: SpotifyApi.MultipleCategoriesResponse
+) => {
   return categories.categories.items.map((category) => ({
     images: category.icons,
-    name: category.name
+    name: category.name,
   }))
 }
 
-export type spotifyApiResponse = Promise<Category[]> | Promise<PlayList[]> | Promise<Album[]>
+export type spotifyApiResponse =
+  | Promise<Category[]>
+  | Promise<PlayList[]>
+  | Promise<Album[]>
 
-const spotifyWebApi = (token): SpotifyApi  => {
-  const spotifyApi = new SpotifyWebApi();
+const spotifyWebApi = (token): SpotifyApi => {
+  const spotifyApi = new SpotifyWebApi()
   spotifyApi.setAccessToken(token)
 
   return {
@@ -47,7 +54,7 @@ const spotifyWebApi = (token): SpotifyApi  => {
       const releases = await spotifyApi.getNewReleases()
 
       return transformNewReleases(releases)
-    }
+    },
   }
 }
 

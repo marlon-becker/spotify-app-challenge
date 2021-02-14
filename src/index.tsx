@@ -8,19 +8,19 @@ import {
   authorized,
   initialState,
   reducer,
-  unauthorized
+  unauthorized,
 } from './pods/auth'
 import Layout from './pods/shared/components/Layout'
 import HomeContainer from './pods/Home/components/HomeContainer'
 
 const App = () => {
-  const [state, dispatch] = React.useReducer(reducer, initialState);
+  const [state, dispatch] = React.useReducer(reducer, initialState)
 
   useEffect(() => {
     const authorize = async () => {
       try {
-      const authResponse = await spotifyAuth()
-      dispatch(authorized(authResponse.access_token))
+        const authResponse = await spotifyAuth()
+        dispatch(authorized(authResponse.access_token))
       } catch (error) {
         dispatch(unauthorized())
       }
@@ -34,7 +34,9 @@ const App = () => {
       <Layout>
         {!state.isAuthorizing && state.isAuthorized && <HomeContainer />}
         {state.isAuthorizing && <div>Authorizing</div>}
-        {!state.isAuthorizing && !state.isAuthorized && <div>Not authorized</div>}
+        {!state.isAuthorizing && !state.isAuthorized && (
+          <div>Not authorized</div>
+        )}
       </Layout>
     </AuthContext.Provider>
   )

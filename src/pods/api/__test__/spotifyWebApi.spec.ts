@@ -25,7 +25,7 @@ describe('Given the spotifyWebApi implementation', () => {
     it('Then it should return transformed newReleases', async () => {
       mockedSpotifyWebApi.mockImplementation(() => ({
         setAccessToken: jest.fn(),
-        getNewReleases: () => Promise.resolve(newReleases)
+        getNewReleases: () => Promise.resolve(newReleases),
       }))
       const api = spotifyWebApi(stubs.token)
       const response = await api.getNewReleases()
@@ -38,7 +38,7 @@ describe('Given the spotifyWebApi implementation', () => {
     it('Then it should return transformed featuredPlaylists', async () => {
       mockedSpotifyWebApi.mockImplementation(() => ({
         setAccessToken: jest.fn(),
-        getFeaturedPlaylists: () => Promise.resolve(featuredPlaylists)
+        getFeaturedPlaylists: () => Promise.resolve(featuredPlaylists),
       }))
       const api = spotifyWebApi(stubs.token)
       const response = await api.getFeaturedPlaylists()
@@ -51,7 +51,7 @@ describe('Given the spotifyWebApi implementation', () => {
     it('Then it should return transformed categories', async () => {
       mockedSpotifyWebApi.mockImplementation(() => ({
         setAccessToken: jest.fn(),
-        getCategories: () => Promise.resolve(categories)
+        getCategories: () => Promise.resolve(categories),
       }))
       const api = spotifyWebApi(stubs.token)
       const response = await api.getCategories()

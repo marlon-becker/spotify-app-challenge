@@ -4,11 +4,6 @@ export interface Image {
   width?: number
 }
 
-interface Artist {
-  images: Image[]
-  name: string
-}
-
 export interface Album {
   albumType: string
   images: Image[]

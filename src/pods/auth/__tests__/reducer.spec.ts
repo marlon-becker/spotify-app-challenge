@@ -7,13 +7,13 @@ describe('Given auth reducer function', () => {
     it('Then it should return valid state', () => {
       const action = {
         type: 'VALID_TOKEN',
-        token: stubs.token
+        token: stubs.token,
       }
 
       expect(reducer(initialState, action)).toEqual({
         isAuthorizing: false,
         isAuthorized: true,
-        token: stubs.token
+        token: stubs.token,
       })
     })
   })
@@ -25,7 +25,7 @@ describe('Given auth reducer function', () => {
       expect(reducer(initialState, action)).toEqual({
         isAuthorizing: false,
         isAuthorized: false,
-        token: undefined
+        token: undefined,
       })
     })
   })
@@ -37,11 +37,8 @@ describe('Given auth reducer function', () => {
       expect(reducer(initialState, action)).toEqual({
         isAuthorizing: true,
         isAuthorized: false,
-        token: undefined
+        token: undefined,
       })
     })
   })
 })
-
-
-

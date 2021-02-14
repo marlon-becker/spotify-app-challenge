@@ -1,9 +1,10 @@
-import React, { FC, ReactNode } from 'react'
+import React, { FC } from 'react'
 
 import styles from './Section.module.scss'
+import ItemsList from './ItemsList'
 
 interface Props {
-  children: ReactNode,
+  items: any[]
   title: string
 }
 
@@ -16,7 +17,7 @@ const Section: FC<Props> = (props) => {
         </h3>
       </header>
       <main>
-        {props.children}
+        <ItemsList items={props.items} />
       </main>
     </section>
   )

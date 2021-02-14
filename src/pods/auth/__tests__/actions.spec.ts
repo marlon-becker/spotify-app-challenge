@@ -8,7 +8,7 @@ describe('Given auth reducer actions', () => {
 
       expect(action).toEqual({
         type: 'VALID_TOKEN',
-        token: stubs.token
+        token: stubs.token,
       })
     })
   })
