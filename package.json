@@ -23,7 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage --coverageDirectory='results/' --watchAll=false",
     "eject": "react-scripts eject",
     "test:lint": "eslint . --ext .tsx,.ts"
   },
@@ -57,9 +57,8 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx}",
-      "!src/**/__tests__/*.{js,jsx}",
-      "!src/ulabox/services/test/*.js"
+      "src/**/*.{ts,tsx}",
+      "!src/**/__tests__/*.{ts,tsx}"
     ],
     "testMatch": [
       "**/*.(spec).{ts,tsx}"
