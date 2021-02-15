@@ -32,6 +32,7 @@ It makes it easier to abstract all the structure of a page in reusable component
 easy to scale and much more easy to test.
 
 - What are the life stages of a component?
+
 Basically there are three stages in a component:
 Mount, update and unmount, depending if your are using class components or functional components the way you interact 
 with these cycles will different. For example in a functional component you could use useEffect to interact with all three
@@ -39,6 +40,7 @@ of these cycles (useEffect will execute after the first render, on updates (depe
 and when component is unmounted (if you returned a function to execute then))
 
 - How does ReactJS use "keys"?
+
 React assigns the keys to be able to identify the elements from a list and then been able to know if has changed, 
 removed or added. It's recommended to use unique strings and never use the for example index of an array when 
 doing a map.  
@@ -57,13 +59,17 @@ Because the assures you that all type of events will work the same way in all br
 
 Is a type of more compacted function introduced in ES6. Some differences are:
 It allows more compacted formats like:
-`() => return true`
-`value => return value`
-`(param1, param2) => param1 + param2`
-It has not own context (not own this nor arguments param)
+
+- `() => return true`
+- `value => return value`
+- `(param1, param2) => param1 + param2`
+
+It has not an own context (nor own this, nor arguments param)
+
 You cannot yield inside so not valid for generators
 
 - What is React Redux?
+
 Is a state management system for javascript applications. It's base on having an immutable state, and any change is 
 done dispatching actions that will be treated by one or multiple reducers and create a new copy of the state with the 
 desired changes. This way we can avoid side effects and have a control on how the state changes over time.
