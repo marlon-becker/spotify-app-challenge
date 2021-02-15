@@ -13,7 +13,7 @@ const Content: FC = () => {
   } = useHomeContent()
 
   if (isLoading) return <Message>Loading</Message>
-  if (isError) return <Message>Error loading</Message>
+  if (isError) return <Message>Error loading content</Message>
 
   return (
     <>
