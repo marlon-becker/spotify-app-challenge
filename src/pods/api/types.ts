@@ -4,24 +4,13 @@ export interface Image {
   width?: number
 }
 
-export interface Album {
-  albumType: string
-  images: Image[]
-  name: string
-}
-
-export interface PlayList {
-  images: Image[]
-  name: string
-}
-
-export interface Category {
+export interface SpotifyItem {
   images: Image[]
   name: string
 }
 
 export interface SpotifyApi {
-  getCategories: () => Promise<Category[]>
-  getFeaturedPlaylists: () => Promise<PlayList[]>
-  getNewReleases: () => Promise<Album[]>
+  getCategories: () => Promise<SpotifyItem[]>
+  getFeaturedPlaylists: () => Promise<SpotifyItem[]>
+  getNewReleases: () => Promise<SpotifyItem[]>
 }

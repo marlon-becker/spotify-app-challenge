@@ -1,13 +1,10 @@
 import React, { FC } from 'react'
 
-import { Image } from 'pods/api/types'
+import { SpotifyItem } from 'pods/api/types'
 import styles from './Item.module.scss'
 
 interface Props {
-  item: {
-    name: string
-    images: Image[]
-  }
+  item: SpotifyItem
 }
 
 const Item: FC<Props> = ({ item }) => {

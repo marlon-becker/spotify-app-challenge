@@ -1,12 +1,13 @@
 import React, { FC } from 'react'
-
-import styles from './Section.module.scss'
-import ItemsList from './ItemsList'
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import { SpotifyItem } from 'pods/api/types'
+import styles from './Section.module.scss'
+import ItemsList from './ItemsList'
+
 interface Props {
-  items: any[]
+  items: SpotifyItem[]
   title: string
 }
 
