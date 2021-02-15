@@ -19,7 +19,6 @@ export const errorMessage = 'Error message'
 
 export const transformedNewReleases = [
   {
-    albumType: 'album',
     images: [
       {
         height: 640,
@@ -40,7 +39,6 @@ export const transformedNewReleases = [
     name: 'Judas and the Black Messiah: The Inspired Album',
   },
   {
-    albumType: 'single',
     images: [
       {
         height: 640,
