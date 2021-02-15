@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
-import Section from './Section'
-import useHomeContent from '../hooks/useHomeContent'
-import Message from '../../shared/components/Message'
+import Section from './components/Section'
+import useHomeContent from './hooks/useHomeContent'
+import Message from '../shared/components/Message'
 
 const Content: FC = () => {
   const {

@@ -11,7 +11,7 @@ import {
   unauthorized,
 } from './pods/auth'
 import Layout from './pods/shared/components/Layout'
-import HomeContainer from './pods/Home/components/HomeContainer'
+import HomeContainer from './pods/Home/HomeContainer'
 import Message from './pods/shared/components/Message'
 
 const App = () => {
