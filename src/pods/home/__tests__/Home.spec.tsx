@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react'
 import HomeContainer from '../HomeContainer'
 import useHomeContent from '../hooks/useHomeContent'
 
-jest.mock('pods/Home/hooks/useHomeContent')
+jest.mock('pods/home/hooks/useHomeContent')
 
 describe('Give HomeContainer', () => {
   describe('When content is loading', () => {
